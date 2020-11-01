@@ -50,8 +50,7 @@ void setup()
 void floorCalibration() {
 	/* Place Robot On Floor (no line) */
 	delay(2000);
-	String btnMsg = "Push left button on Launchpad to begin calibration.\n";
-	btnMsg += "Make sure the robot is on the floor away from the line.\n";
+	const char* btnMsg = "Push left button on Launchpad to begin calibration.\n" "Make sure the robot is on the floor away from the line.\n";
 	/* Wait until button is pressed to start robot */
 	waitBtnPressed(LP_LEFT_BTN,btnMsg,RED_LED);
 
@@ -61,10 +60,9 @@ void floorCalibration() {
 	simpleCalibrate();
 	Serial.println("Reading floor values complete");
 
-	btnMsg = "Push left button on Launchpad to begin line following.\n";
-	btnMsg += "Make sure the robot is on the line.\n";
+	const char* btnMsg2 = "Push left button on Launchpad to begin line following.\n" "Make sure the robot is on the line.\n";
 	/* Wait until button is pressed to start robot */
-	waitBtnPressed(LP_LEFT_BTN,btnMsg,RED_LED);
+	waitBtnPressed(LP_LEFT_BTN,btnMsg2,RED_LED);
 	delay(1000);
 
 	enableMotor(BOTH_MOTORS);

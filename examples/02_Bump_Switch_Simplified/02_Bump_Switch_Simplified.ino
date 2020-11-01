@@ -38,7 +38,7 @@ void setup() {
 void loop() {
 	bool hitObstacle = false;
 
-	String btnMsg = "Push left button on Launchpad to start demo.\n";
+	const char* btnMsg = "Push left button on Launchpad to start demo.\n";
 	/* Wait until button is pressed to start robot */
 	waitBtnPressed(LP_LEFT_BTN,btnMsg,RED_LED);
 

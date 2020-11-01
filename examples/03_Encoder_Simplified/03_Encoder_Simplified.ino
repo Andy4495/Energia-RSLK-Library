@@ -66,11 +66,11 @@ void loop() {
 
 	/* Amount of encoder pulses needed to achieve distance */
 	uint16_t x = countForDistance(wheelDiameter, cntPerRevolution, inchesToTravel);
-	String btnMsg = "Expected count: ";
-	btnMsg += x;
+	Serial.print("Expected count: ");
+	Serial.println(x);
 
 	/* Wait until button is pressed to start robot */
-	btnMsg += "\nPush left button on Launchpad to start demo.\n";
+	const char* btnMsg = "\nPush left button on Launchpad to start demo.\n";
 	/* Wait until button is pressed to start robot */
 	waitBtnPressed(LP_LEFT_BTN,btnMsg,RED_LED);
 
