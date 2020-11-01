@@ -9,7 +9,7 @@ Romi_Motor_Power::Romi_Motor_Power()
 	preserve_speed = 0;
 }
 
-bool Romi_Motor_Power::begin(uint8_t _slp_pin, uint8_t _dir_pin,uint8_t _pwm_pin) {
+void Romi_Motor_Power::begin(uint8_t _slp_pin, uint8_t _dir_pin,uint8_t _pwm_pin) {
 	slp_pin = _slp_pin;
 	dir_pin = _dir_pin;
 	pwm_pin = _pwm_pin;

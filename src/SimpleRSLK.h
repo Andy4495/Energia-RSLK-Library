@@ -264,9 +264,6 @@ void readCalLineSensor(uint16_t* sensor,
 /// \brief Get line position
 /// \param[in] calVal is an array that is filled with the line sensor calibrated values.
 ///
-/// \param[in] mode determines if the line is dark or light.
-/// - 0 is used when the line is darker than the floor
-/// - 1 is used when the line is lighter than the floor.
 ///
 /// \return value between 0 - 7000.
 ///  - 0 no line detected
@@ -279,5 +276,5 @@ void readCalLineSensor(uint16_t* sensor,
 ///
 ///  Using calibrated line sensor value this function provides a numerical value indicating
 ///  where the robot is detecting the line. This function can be overridden.
-uint32_t getLinePosition(uint16_t* calVal, uint8_t mode);
+uint32_t getLinePosition(uint16_t* calVal);
 #endif

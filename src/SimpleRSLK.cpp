@@ -38,14 +38,14 @@ void setupRSLK() {
 }
 
 uint16_t readSharpDist(uint8_t num) {
-	if(num < 0 || num > 3)
+	if(num > 3)
 		return 0;
 
 	return dst_sensor[num].read();
 }
 
 bool isBumpSwitchPressed(uint8_t num) {
-	if(num < 0 || num > 5)
+	if(num > 5)
 		return false;
 
 	if(bump_sw[num].read() == 0) {
@@ -181,7 +181,7 @@ void readCalLineSensor(uint16_t* sensorValues,
 	}
 }
 
-uint32_t getLinePosition(uint16_t* calVal, uint8_t mode)
+uint32_t getLinePosition(uint16_t* calVal)
 {
 	uint32_t avg = 0; // this is for the weighted total
 	uint32_t sum = 0; // this is for the denominator, which is <= 64000

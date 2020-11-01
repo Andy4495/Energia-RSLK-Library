@@ -32,7 +32,7 @@ class Romi_Motor_Power
 		/// \param[in] ipwm_pin pin number on Launchpad connected to motor's PWM pin
 		///
 		/// Call this function to initialize motor
-		bool begin(uint8_t islp_pin, uint8_t idir_pin,uint8_t ipwm_pin);
+		void begin(uint8_t islp_pin, uint8_t idir_pin,uint8_t ipwm_pin);
 
 		/// \brief Disable motor
 		///
@@ -94,5 +94,3 @@ class Romi_Motor_Power
 };
 
 #endif
-
-

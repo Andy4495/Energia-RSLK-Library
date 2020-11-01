@@ -110,7 +110,7 @@ void loop()
 					  sensorMaxVal,
 					  lineColor);
 
-	uint32_t linePos = getLinePosition(sensorCalVal,lineColor);
+	uint32_t linePos = getLinePosition(sensorCalVal);
 
 	if(linePos > 0 && linePos < 3000) {
 		setMotorSpeed(LEFT_MOTOR,normalSpeed);
